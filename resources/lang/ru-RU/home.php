@@ -9,6 +9,7 @@ return [
     'Add a new team'    => 'Добавить новую команду',
     'Add a new office'  => 'Добавить новый офис',
     'What\'s on your plate today' => 'Ваши задачи на сегодня',
+    'There is currently no work "In Progress" assigned to you' => 'Сейчас нет задач со статусом "В процессе", назначенных вам',
     'Due on' => 'Выполнить до',
     'Progress' => 'Прогресс',
     'No progress update yet' => 'Обновлений пока нет',
