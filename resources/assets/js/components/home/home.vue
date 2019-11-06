@@ -2,7 +2,7 @@
   <div v-if="activeTab === 'home'">
     <div class="bg-white rounded shadow p-8">
       <div class="text-xl">
-        What's on your plate today ⬇️
+        {{ 'What\'s on your plate today' | localize }} ⬇️
       </div>
       <div v-if="currentWork.length === 0" class="mt-4">There is currently no work "In Progress" assigned to you</div>
       <a v-if="currentWork.length !== 0" :href="'/' + currentWork[0].taskable_type + 's/' + currentWork[0].taskable_id + '?tool=tasks&id=' + currentWork[0].id" class="block mt-4 p-4 rounded-lg bg-gray-100 border-2 border-indigo-300 cursor-pointer">
