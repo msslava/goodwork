@@ -20,15 +20,15 @@
         </div>
         <div class="py-4">
           <div class="text-lg font-medium border-b-2 pb-1">
-            Progress
+            {{ 'Progress' | localize }}
           </div>
           <!-- Progress list -->
           <div v-if="currentWork.length !== 0 && currentWork[0].steps.length === 0" class="pt-2">
-            No progress update yet
+            {{ 'No progress update yet' | localize }}
           </div>
           <div v-for="step in currentWork[0].steps" class="bg-white rounded shadow px-4 py-2 my-4">
             <div class="text-xs text-indigo-700">
-              <span class="text-gray-700">Last updated:</span> {{ step.updated_at }}
+              <span class="text-gray-700">{{ 'Last updated' | localize }}:</span> {{ step.updated_at }}
             </div>
             <div class="text-2xl">
               {{ step.description }}
@@ -36,11 +36,11 @@
             <div class="flex">
               <div class="py-2 pr-4 text-gray-700">
                 <input type="checkbox" :id="'step-done-' + step.id" class="checkbox" :checked="step.done">
-                <label :for="'step-done-' + step.id">Done</label>
+                <label :for="'step-done-' + step.id">{{ 'Done' | localize }}</label>
               </div>
               <div class="py-2 text-gray-700">
                 <input type="checkbox" :id="'step-unknown-' + step.id" class="checkbox" :checked="step.unknown">
-                <label :for="'step-unknown-' + step.id">Unknown</label>
+                <label :for="'step-unknown-' + step.id">{{ 'Unknown' | localize }}</label>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@
       </a>
       <div v-if="currentWork.length !== 0" class="pt-8 flex items-center pb-4">
         <div class="text-base mr-2">
-          Other tasks in progress
+          {{ 'Other tasks in progress' | localize }}
         </div>
         <div class="text-xs font-bold bg-teal-600 text-white flex items-center justify-center w-6 h-6 rounded-full">{{ currentWork.length - 1 }}</div>
       </div>
